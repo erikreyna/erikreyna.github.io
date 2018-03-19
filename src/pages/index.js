@@ -1,11 +1,18 @@
 import React, { Component } from "react";
 import Link from "gatsby-link";
 
+import Twitter from "react-icons/lib/fa/twitter";
+import LinkedIn from "react-icons/lib/fa/linkedin";
+import Github from "react-icons/lib/fa/github";
+
 import {
   StyledHeader,
   StyledSection,
   StyledUnorderedList,
-  StyledListItem
+  StyledListItem,
+  StyledIcons,
+  StyledFooter,
+  StyledLink
 } from "../styles/styled-components";
 export default class IndexPage extends Component {
   render() {
@@ -53,9 +60,27 @@ export default class IndexPage extends Component {
           <h1>Erik Reyna</h1>
         </StyledHeader>
         <StyledSection>
-          Erik Reyna is currently a software developer at The Washington Post.
-          He also enjoys taking pictures and playing music in his free time.
+          <i>is writing software at The Washington Post.</i>
         </StyledSection>
+        <StyledFooter>
+          <StyledUnorderedList>
+            <StyledListItem>
+              <StyledLink href="https://twitter.com/erikreyna">
+                <Twitter className="pixel-punch-up" /> Twitter
+              </StyledLink>
+            </StyledListItem>
+            <StyledListItem>
+              <StyledLink href="https://linkedin.com/in/erikreyna">
+                <LinkedIn className="pixel-punch-up" /> LinkedIn
+              </StyledLink>
+            </StyledListItem>
+            <StyledListItem>
+              <StyledLink href="https://github.com/erikreyna">
+                <Github className="pixel-punch-up" /> Github
+              </StyledLink>
+            </StyledListItem>
+          </StyledUnorderedList>
+        </StyledFooter>
       </div>
     );
   }

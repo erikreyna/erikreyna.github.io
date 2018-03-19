@@ -1,8 +1,26 @@
-body,
 html {
   height: 100%;
-  display: grid;
 }
+
+body {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  background-color: rgba(245, 245, 245, 0.3);
+}
+
+.particles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
 #___gatsby {
   margin: auto;
+}
+
+.pixel-punch-up {
+  position: relative !important;
+  top: -2px !important;
 }
